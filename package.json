@@ -7,7 +7,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "lint": "eslint . --ext .js"
   },
   "dependencies": {
     "expo": "~45.0.0",
@@ -15,10 +16,16 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-native": "0.68.2",
-    "react-native-web": "0.17.7"
+    "react-native-paper": "^4.12.2",
+    "react-native-web": "0.17.7",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "@react-native-community/eslint-config": "^3.0.3",
+    "@types/styled-components": "^5.1.25",
+    "eslint": "^8.19.0",
+    "prettier": "^2.7.1"
   },
   "private": true
 }
