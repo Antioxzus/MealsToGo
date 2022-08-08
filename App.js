@@ -67,10 +67,11 @@ export default function App() {
              <NavigationContainer>
                <Tab.Navigator
                  screenOptions={createScreenOptions}
-                 tabBarOptions={{
-                   activeTintColor: "tomato",
-                   inactiveTintColor: "gray",
-                 }}
+                 
+                 screenOptions={{
+                  "tabBarActiveTintColor": "#ff5d8f",
+                  "tabBarInactiveTintColor": "gray",
+                }}
                >
                  <Tab.Screen name="Restaurants" component={RestaurantsScreen} />
                  <Tab.Screen name="Map" component={Map} />
