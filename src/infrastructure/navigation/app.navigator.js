@@ -27,25 +27,23 @@ import React from "react";
    </SafeArea>
  );
 
- const createScreenOptions = ({ route }) => {
-   const iconName = TAB_ICON[route.name];
-   return {
-     tabBarIcon: ({ size, color }) => (
-       <Ionicons name={iconName} size={size} color={color} />
-     ),
-   };
- };
-
  export const AppNavigator = () => (
    <NavigationContainer>
      <Tab.Navigator
-       screenOptions={createScreenOptions}
-       tabBarOptions={{
-         activeTintColor: "tomato",
-         inactiveTintColor: "gray",
-       }}
+       screenOptions={({ route }) => ({
+        tabBarIcon: ({ color, size }) => {
+          const iconName = TAB_ICON[route.name];
+          return (
+            <Ionicons name={iconName} size={size} color={color} />
+          );
+        },
+        headerShown: false,
+        tabBarActiveTintColor: "#ff5d8f",
+        tabBarInactiveTintColor: "gray"
+      })}
      >
-       <Tab.Screen name="Restaurants" component={RestaurantsNavigator} />
+
+       <Tab.Screen name="Restaurants" component={RestaurantsNavigator}  />
        <Tab.Screen name="Map" component={Map} />
        <Tab.Screen name="Settings" component={Settings} />
      </Tab.Navigator>

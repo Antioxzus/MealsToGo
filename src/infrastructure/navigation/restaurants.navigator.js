@@ -11,11 +11,12 @@ import React from "react";
 
  export const RestaurantsNavigator = () => {
    return (
-     <RestaurantStack.Navigator headerMode="none" screenOptions={{
+     <RestaurantStack.Navigator screenOptions={{
        ...TransitionPresets.ModalPresentationIOS,
+       headerShown: false,
      }}>
        <RestaurantStack.Screen
-         name="Restaurants"
+         name="Restaurant"
          component={RestaurantsScreen}
        />
        <RestaurantStack.Screen
